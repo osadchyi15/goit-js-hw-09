@@ -1,0 +1,23 @@
+.gallery {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 1440px;
+  height: 696px;
+  padding: 24px 156px;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+}

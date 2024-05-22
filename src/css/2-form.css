@@ -1,0 +1,9 @@
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  width: 408px;
+  height: 296px;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #fff;
+}
