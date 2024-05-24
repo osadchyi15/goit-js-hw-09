@@ -15,9 +15,11 @@
   width: 360px;
   height: 200px;
   object-fit: cover;
-  transition: 0.5s;
+  transition: 500ms;
 }
 
 .gallery-image:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  filter: drop-shadow(4px 4px 5px #200f0f);
+  border-radius: 8px;
 }
