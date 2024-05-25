@@ -22,12 +22,12 @@ let formData = {
 
 // Збереження formData в локальне сховище
 function addToLocalStorage() {
-    localStorage.setItem('formText', JSON.stringify(formData));
+    localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 
 // Заповнення форми
 function fillFromLocalStorage() {
-    const savedData = localStorage.getItem('formText');
+    const savedData = localStorage.getItem('feedback-form-state');
     if (savedData) {
         formData = JSON.parse(savedData);
         emailInput.value = formData.email;
@@ -48,11 +48,13 @@ form.addEventListener('submit', (event) => {
     if (!formData.email || !formData.message) {
         alert('Fill please all fields');
     } else {
-     
-        localStorage.removeItem('formText');
+        console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
+        localStorage.removeItem('feedback-form-state');
         formData = { email: "", message: "" };
         form.reset();
     }
+
+     
 });
 
 // Заповнення при завантаженні
